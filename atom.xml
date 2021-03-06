@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Fhrdr</title>
+  <title>Fhrdr&#39;s Blog</title>
   
   <subtitle>Fhrdr的成长之路</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-06T04:41:19.417Z</updated>
+  <updated>2021-03-06T19:16:35.703Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,22 +17,49 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>IDEA快捷键总结</title>
+    <link href="http://example.com/2021/03/07/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2021/03/07/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/</id>
+    <published>2021-03-06T18:04:21.000Z</published>
+    <updated>2021-03-06T19:16:35.703Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="IDEA快捷键总结"><a href="#IDEA快捷键总结" class="headerlink" title="IDEA快捷键总结"></a>IDEA快捷键总结</h1><p>以下为我比较常用的快捷键，一般目前会用到的就是这些了吧</p><h3 id="1-CTRL"><a href="#1-CTRL" class="headerlink" title="1.CTRL"></a>1.CTRL</h3><table><thead><tr><th align="center">快捷键</th><th align="center">介绍</th></tr></thead><tbody><tr><td align="center">Ctrl + C / V</td><td align="center">粘贴 / 复制</td></tr><tr><td align="center">Ctrl + A</td><td align="center">全选</td></tr><tr><td align="center">Ctrl + S</td><td align="center">保存</td></tr><tr><td align="center">Ctrl + Z</td><td align="center">撤销</td></tr><tr><td align="center">Ctrl + X</td><td align="center">剪切</td></tr><tr><td align="center">Ctrl + /</td><td align="center">注释</td></tr><tr><td align="center">Ctrl + D</td><td align="center">复制当行代码</td></tr><tr><td align="center">Ctrl + F / R</td><td align="center">查找 / 替换</td></tr><tr><td align="center">Ctrl + home / end</td><td align="center">跳转到文件开始 / 末尾</td></tr><tr><td align="center">Ctrl + P</td><td align="center">方法参数提示</td></tr><tr><td align="center">Ctrl + H</td><td align="center">打开层次（继承）关系</td></tr><tr><td align="center">Ctrl +  W</td><td align="center">递进式选择代码块</td></tr><tr><td align="center">Ctrl + B</td><td align="center">跳转到方法 / 变量位置</td></tr><tr><td align="center">Ctrl + + / -</td><td align="center">代码块的展开 / 收拢</td></tr><tr><td align="center">Ctrl + 左右方向键</td><td align="center">单词间跳转</td></tr></tbody></table><h3 id="2-SHIFT"><a href="#2-SHIFT" class="headerlink" title="2.SHIFT"></a>2.SHIFT</h3><table><thead><tr><th align="center">快捷键</th><th align="center">介绍</th></tr></thead><tbody><tr><td align="center">Shift + F6</td><td align="center">文件 / 类 / 方法重命名</td></tr><tr><td align="center">Shift + Tab</td><td align="center">取消缩进</td></tr><tr><td align="center">Shift + Enter</td><td align="center">开始新的一行</td></tr></tbody></table><h3 id="3-ALT"><a href="#3-ALT" class="headerlink" title="3.ALT"></a>3.ALT</h3><table><thead><tr><th align="center">快捷键</th><th align="center">介绍</th></tr></thead><tbody><tr><td align="center">Alt + Enter</td><td align="center">提供快速修复</td></tr><tr><td align="center">Alt + Insert</td><td align="center">代码快速生成</td></tr><tr><td align="center">Alt + 方向左右键</td><td align="center">打开程序之间快速跳转</td></tr><tr><td align="center">Alt + 方向上下键</td><td align="center">不同方法间的快速跳转</td></tr><tr><td align="center">Alt + /</td><td align="center">提示补全代码</td></tr></tbody></table><h3 id="4-多个组合键"><a href="#4-多个组合键" class="headerlink" title="4.多个组合键"></a>4.多个组合键</h3><table><thead><tr><th align="center">快捷键</th><th align="center">介绍</th></tr></thead><tbody><tr><td align="center">Ctrl + Shift + F10</td><td align="center">运行当前代码</td></tr><tr><td align="center">Ctrl + Alt + S</td><td align="center">打开设置</td></tr><tr><td align="center">Ctrl + Alt + Shift + S</td><td align="center">打开项目设置</td></tr><tr><td align="center">Ctrl + Shift + 方向上下键</td><td align="center">本行 / 选中代码上下移</td></tr><tr><td align="center">Ctrl + Shift + /</td><td align="center">选中代码注释</td></tr><tr><td align="center">Ctrl + Shift + Enter</td><td align="center">快速分割代码</td></tr><tr><td align="center">Ctrl + Alt + 方向左右键</td><td align="center">回到上一个操作的地方</td></tr><tr><td align="center">Ctrl + Shift + U</td><td align="center">代码大小写替换</td></tr></tbody></table><h3 id="5-快捷输入"><a href="#5-快捷输入" class="headerlink" title="5.快捷输入"></a>5.快捷输入</h3><table><thead><tr><th align="center">快捷字符</th><th align="center">介绍</th></tr></thead><tbody><tr><td align="center">main / psvm</td><td align="center">main方法，程序入口</td></tr><tr><td align="center">sout</td><td align="center">println打印</td></tr><tr><td align="center">fori</td><td align="center">for循环</td></tr><tr><td align="center">ifn</td><td align="center">if (参数 == null)判断</td></tr></tbody></table><p>以上都是自带的常用的总结</p><p>IDEA设置中可以添加自己的快捷输入，位置：setting – Editor – Live Remplates</p><p>在这里就可以进行设置了，可以添加一个MyKeys，然后添加自己的快捷输入</p><hr><blockquote><p>以上便是我们常会用到的IDEA快捷键了，如有更多需求，可参考以下或者网上查阅：</p><p><a href="https://blog.csdn.net/qq_38963960/article/details/89552704">https://blog.csdn.net/qq_38963960/article/details/89552704</a></p></blockquote>]]></content>
+    
+    
+    <summary type="html">这里介绍了我个人的常用的IDEA快捷键，也是目前开发用到最多的吧，这里便总结一下.</summary>
+    
+    
+    
+    <category term="java" scheme="http://example.com/categories/java/"/>
+    
+    
+    <category term="IDEA" scheme="http://example.com/tags/IDEA/"/>
+    
+    <category term="快捷键" scheme="http://example.com/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://example.com/2021/03/06/hello-world/"/>
     <id>http://example.com/2021/03/06/hello-world/</id>
-    <published>2021-03-06T04:41:19.417Z</published>
-    <updated>2021-03-06T04:41:19.417Z</updated>
+    <published>2021-03-06T00:04:21.000Z</published>
+    <updated>2021-03-06T19:38:52.726Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.i</summary>
       
     
     
     
+    <category term="java" scheme="http://example.com/categories/java/"/>
+    
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
     
   </entry>
   
