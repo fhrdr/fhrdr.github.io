@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/j
     let initData = {
       el: '#twikoo-wrap',
       envId: 'fhrdr-3gu59c9m54247d07',
-      region: ''
+      region: 'ap-shanghai'
     }
 
     if (false) {
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/j
   const getCount = () => {
     twikoo.getCommentsCount({
       envId: 'fhrdr-3gu59c9m54247d07',
-      region: '',
+      region: 'ap-shanghai',
       urls: [window.location.pathname],
       includeReply: false
     }).then(function (res) {
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/j
     const runTwikoo = () => {
       twikoo.getRecentComments({
         envId: 'fhrdr-3gu59c9m54247d07',
-        region: '',
+        region: 'ap-shanghai',
         pageSize: 6,
         includeReply: true
       }).then(function (res) {
