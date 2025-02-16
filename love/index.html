@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ 爱的告白 ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #ffebee, #fce4ec, #f3e5f5, #e8eaf6, #e3f2fd);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: "Microsoft YaHei", sans-serif;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .image-container {
+            width: 90%;
+            max-width: 400px;
+            height: auto;
+            aspect-ratio: 1;
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(233, 30, 99, 0.2);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .question {
+            font-size: clamp(20px, 5vw, 28px);
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff4081, #e91e63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: floating 3s ease-in-out infinite;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: clamp(10px, 3vw, 15px) clamp(20px, 5vw, 40px);
+            margin: 0;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: clamp(16px, 4vw, 20px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-yes {
+            background: linear-gradient(45deg, #ff4081, #e91e63);
+            color: white;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+        }
+
+        .btn-yes:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4);
+        }
+
+        .btn-no {
+            background: rgba(255, 255, 255, 0.9);
+            color: #e91e63;
+            border: 2px solid #e91e63;
+            backdrop-filter: blur(5px);
+        }
+
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 25px;
+            animation: floatUpward 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+            text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+        }
+
+        @keyframes floatUpward {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-20vh) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: twinkle 1s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 添加新的动画效果 */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: white;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        @keyframes sparkleFloat {
+            0% {
+                transform: translate(0, 0) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--tx), var(--ty)) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* 添加打字机效果 */
+        .typed-text {
+            border-right: 2px solid #e91e63;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #e91e63 }
+        }
+
+        /* 添加媒体查询 */
+        @media screen and (max-width: 480px) {
+            .heart {
+                font-size: 20px;
+            }
+
+            .sparkle {
+                width: 3px;
+                height: 3px;
+            }
+
+            .typed-text {
+                font-size: clamp(18px, 4.5vw, 24px);
+            }
+        }
+
+        @media screen and (max-height: 700px) {
+            .image-container {
+                margin: 10px auto;
+            }
+
+            .buttons {
+                margin-top: 10px;
+            }
+
+            .question {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="images/1.png" id="love-image" alt="爱的图片">
+        </div>
+        <div class="question" id="question">可以成为我的恋人吗？</div>
+        <div class="buttons">
+            <button class="btn btn-yes" id="btn-yes">可以</button>
+            <button class="btn btn-no" id="btn-no">不可以</button>
+        </div>
+    </div>
+    <div class="hearts" id="hearts"></div>
+
+    <script>
+        let currentImage = 1;
+        let yesButtonSize = 1;
+        const loveImage = document.getElementById('love-image');
+        const btnYes = document.getElementById('btn-yes');
+        const btnNo = document.getElementById('btn-no');
+        const question = document.getElementById('question');
+        const heartsContainer = document.getElementById('hearts');
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = ['❤', '💖', '💕', '💗', '💓'][Math.floor(Math.random() * 5)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.bottom = '-50px';  // 从底部开始
+            heart.style.opacity = Math.random() * 0.5 + 0.5;
+            heart.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
+            heartsContainer.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.style.setProperty('--tx', (Math.random() - 0.5) * 100 + 'px');
+            sparkle.style.setProperty('--ty', (Math.random() - 0.5) * 100 + 'px');
+            sparkle.style.animation = 'sparkleFloat 1s ease-out forwards';
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+
+        function createStars() {
+            const starsContainer = document.createElement('div');
+            starsContainer.className = 'stars';
+            document.body.appendChild(starsContainer);
+
+            for(let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 2 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        createStars();
+
+        btnNo.addEventListener('click', () => {
+            if (currentImage < 5) {
+                currentImage++;
+                loveImage.src = `images/${currentImage}.png`;
+                yesButtonSize += 0.2;
+                btnYes.style.transform = `scale(${yesButtonSize})`;
+                
+                loveImage.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    loveImage.style.transform = 'scale(1)';
+                }, 200);
+            }
+            
+            const imageRect = document.querySelector('.image-container').getBoundingClientRect();
+            let x, y;
+            let maxAttempts = 50; // 防止无限循环
+            let attempts = 0;
+            
+            do {
+                x = Math.random() * (window.innerWidth - btnNo.offsetWidth);
+                y = Math.random() * (window.innerHeight - btnNo.offsetHeight);
+                attempts++;
+                
+                // 如果尝试次数过多，就选择一个默认安全位置
+                if (attempts >= maxAttempts) {
+                    y = window.innerHeight - btnNo.offsetHeight - 20;
+                    x = 20;
+                    break;
+                }
+            } while (
+                x > imageRect.left - btnNo.offsetWidth && 
+                x < imageRect.right + btnNo.offsetWidth && 
+                y > imageRect.top - btnNo.offsetHeight && 
+                y < imageRect.bottom + btnNo.offsetHeight
+            );
+            
+            // 确保按钮不会超出屏幕边界
+            x = Math.max(10, Math.min(x, window.innerWidth - btnNo.offsetWidth - 10));
+            y = Math.max(10, Math.min(y, window.innerHeight - btnNo.offsetHeight - 10));
+            
+            btnNo.style.position = 'fixed';
+            btnNo.style.left = x + 'px';
+            btnNo.style.top = y + 'px';
+
+            // 添加按钮移动轨迹特效
+            for(let i = 0; i < 10; i++) {
+                setTimeout(() => createSparkle(
+                    x + Math.random() * 100,
+                    y + Math.random() * 40
+                ), i * 50);
+            }
+        });
+
+        btnYes.addEventListener('click', () => {
+            loveImage.src = 'images/6.png';
+            
+            // 使用打字机效果显示文字
+            question.innerHTML = '';
+            question.style.fontSize = '32px';
+            const text = '(≧ω≦)♡ 喜~欢~你~！喵呜～（´▽`)ﾉ';
+            question.classList.add('typed-text');
+            
+            let i = 0;
+            const typeWriter = setInterval(() => {
+                if (i < text.length) {
+                    question.innerHTML += text.charAt(i);
+                    i++;
+                    createSparkle(
+                        Math.random() * window.innerWidth,
+                        Math.random() * window.innerHeight
+                    );
+                } else {
+                    clearInterval(typeWriter);
+                }
+            }, 100);
+
+            btnNo.style.display = 'none';
+            btnYes.style.display = 'none';
+            
+            // 创建烟花效果
+            for(let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    createHeart();
+                    if (i % 5 === 0) {
+                        // 创建环形特效
+                        for(let j = 0; j < 12; j++) {
+                            const angle = (j / 12) * Math.PI * 2;
+                            const x = window.innerWidth / 2 + Math.cos(angle) * 200;
+                            const y = window.innerHeight / 2 + Math.sin(angle) * 200;
+                            createSparkle(x, y);
+                        }
+                    }
+                }, i * 50);
+            }
+
+            // 背景动画
+            document.body.style.animation = 'gradientBG 5s ease infinite';
+        });
+
+        // 按钮悬停特效
+        [btnYes, btnNo].forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                createSparkle(e.clientX, e.clientY);
+            });
+        });
+
+        // 初始化爱心
+        setInterval(createHeart, 400);
+
+        // 添加窗口大小改变时的处理
+        window.addEventListener('resize', () => {
+            const btnNo = document.getElementById('btn-no');
+            if (btnNo.style.position === 'fixed') {
+                // 确保按钮在窗口大小改变时仍然可见
+                const x = Math.min(parseInt(btnNo.style.left), window.innerWidth - btnNo.offsetWidth - 10);
+                const y = Math.min(parseInt(btnNo.style.top), window.innerHeight - btnNo.offsetHeight - 10);
+                btnNo.style.left = x + 'px';
+                btnNo.style.top = y + 'px';
+            }
+        });
+    </script>
+</body>
+</html> 
